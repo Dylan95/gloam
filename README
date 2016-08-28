@@ -8,7 +8,7 @@ TABLE OF CONTENTS:
 
 1.  Introduction:
 
-Hello there.  My name is Dylan Gundlach.  This is the "gloam" library.  It is an OpenGL object oriented wrapper library.  It's a header only library, so installation is simple.  It is currently in alpha, and needs a lot of testing.  I cannot guarentee the backwards compatability of future versions.  I tried to make it as complete as I could.  It has 2 dependencies: "glew" and "glm".
+Hello there.  My name is Dylan Gundlach.  This is the "gloam" library.  It is an OpenGL object oriented wrapper library.  It's a header only library, so installation is simple.  It is currently in alpha, and needs a lot of testing.  I cannot guarentee the backwards compatability of future versions.  I tried to make it as complete as I could.  It has 2 dependencies: "glew" and "glm".  Another note:  I found that library named "gloam.io" exists, and would like to mention that although the name happens to be similar, it is completely unrelated.
 
 
 2.  Legal:
