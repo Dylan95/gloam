@@ -1,0 +1,62 @@
+{
+		"x": 0,
+		"y": 20,
+		"W": 800,
+		"H": 580,
+		"isHorizontal": true,
+		"panel": {
+			"x": 0,
+			"y": 0,
+			"W": 800,
+			"H": 580,
+			"contents": [
+				{
+					"type": "color",
+					"r": 255,
+					"g": 0,
+					"b": 0,
+					"name": "color 0"
+				},
+				{
+					"type": "color",
+					"r": 0,
+					"g": 255,
+					"b": 0,
+					"name": "color 1"
+				},
+				{
+					"type": "color",
+					"r": 0,
+					"g": 0,
+					"b": 255,
+					"name": "color 2"
+				},
+				{
+					"type": "opengl",
+					"name": "opengl viewport",
+					"cameraOrientation": {
+						"position": {
+							"x": 0.0,
+							"y": 0.0,
+							"z": -5.0
+						},
+						"PI angle": 0.0,
+						"axis": {
+							"x": 0.0,
+							"y": 1.0,
+							"z": 0.0
+						}
+					},
+					"layers": [
+						true,
+						false,
+						false,
+						false,
+						false
+					]
+				}
+			]
+		},
+		"children": [
+		]
+	}

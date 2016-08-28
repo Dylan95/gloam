@@ -1,0 +1,10 @@
+-isystem /usr/lib/clang/3.4/include
+-I"./include"
+-I"/usr/include"
+-I"/home/dylan/header_only_libs"
+-I"/home/dylan/makefileProjects/MY_LIBRARIES/dcg/include"
+-I"/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include"
+-I"./include_recursive/" 
+-std=c++14
+-ftrapv
+-ggdb3

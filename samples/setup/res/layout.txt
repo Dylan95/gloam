@@ -1,0 +1,59 @@
+{
+"root": {
+
+"mainWindow": {
+	"x": 0,
+	"y": 0,
+	"W": 800,
+	"H": 600,
+	"panel zone": {
+		"x": 0,
+		"y": 20,
+		"W": 800,
+		"H": 580,
+		"left": null,
+		"right": null,
+		"up": null,
+		"down": null,
+		"center": {
+			"x": 0,
+			"y": 20,
+			"W": 800,
+			"H": 580,
+			"type": "center",
+			"panel": {
+				"x": 0,
+				"y": 20,
+				"W": 800,
+				"H": 580,
+				"contents": [
+					{
+						"type": "color",
+						"r": 0,
+						"g": 255,
+						"b": 0,
+						"name": "color 1"
+					},
+					{
+						"type": "color",
+						"r": 255,
+						"g": 0,
+						"b": 255,
+						"name": "color 2"
+					}
+				],
+				"west": null,
+				"east": null,
+				"south": null,
+				"north": null
+			}
+		}
+	}
+},
+
+"panel area windows": [
+	
+]
+
+}
+}

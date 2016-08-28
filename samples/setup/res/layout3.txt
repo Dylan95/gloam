@@ -1,0 +1,101 @@
+{
+"root": {
+
+"mainWindow": {
+	"x": 0,
+	"y": 0,
+	"W": 800,
+	"H": 600,
+	"panel area": {
+		"x": 0,
+		"y": 20,
+		"W": 800,
+		"H": 580,
+		"isHorizontal": true,
+		"panel": {
+			"x": 0,
+			"y": 0,
+			"W": 800,
+			"H": 580,
+			"contents": [
+				{
+					"type": "color",
+					"r": 255,
+					"g": 0,
+					"b": 0,
+					"name": "color 0"
+				},
+				{
+					"type": "color",
+					"r": 0,
+					"g": 255,
+					"b": 0,
+					"name": "color 1"
+				},
+				{
+					"type": "color",
+					"r": 0,
+					"g": 0,
+					"b": 255,
+					"name": "color 2"
+				},
+				{
+					"type": "color",
+					"r": 40,
+					"g": 167,
+					"b": 26,
+					"name": "color 3"
+				},
+				{
+					"type": "color",
+					"r": 89,
+					"g": 20,
+					"b": 10,
+					"name": "color 4"
+				},
+				{
+					"type": "color",
+					"r": 120,
+					"g": 220,
+					"b": 100,
+					"name": "color 5"
+				},
+				{
+					"type": "opengl",
+					"name": "opengl viewport",
+					"cameraOrientation": {
+						"position": {
+							"x": 0.0,
+							"y": 0.0,
+							"z": -5.0
+						},
+						"PI angle": 0.0,
+						"axis": {
+							"x": 0.0,
+							"y": 1.0,
+							"z": 0.0
+						}
+					},
+					"layers": [
+						true,
+						false,
+						false,
+						false,
+						false
+					]
+				}
+			],
+			"west": null,
+			"east": null,
+			"south": null,
+			"north": null
+		}
+	}
+},
+
+"panel area windows": [
+	
+]
+
+}
+}

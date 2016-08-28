@@ -1,0 +1,543 @@
+bash buildScripts/recursiveInclude.sh > build/generatedInclude/includeDirs_recursive.txt
+cat ./buildConfig/DEBUG/includeDirs.txt > build/generatedInclude/includeDirs_all.txt
+cat build/generatedInclude/includeDirs_recursive.txt >> build/generatedInclude/includeDirs_all.txt
+cat ./buildConfig/DEBUG/clang_complete/config.txt > .clang_complete
+cat build/generatedInclude/includeDirs_all.txt >> .clang_complete
+echo '' >> .clang_complete
+cat ./buildConfig/DEBUG/cflags.txt >> .clang_complete
+g++-6 -I"./include" -I"/usr/include" -I"/home/dylan/header_only_libs" -I"/home/dylan/makefileProjects/MY_LIBRARIES/dcg/include" -I"/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include" -I"./include_recursive/"   -c -o build/obj/main.o src/main.cpp -std=c++14 -ftrapv -ggdb3
+In file included from /home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/core.hpp:9:0,
+                 from /home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/gloc.hpp:4,
+                 from src/main.cpp:6:
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:56:18: error: ‘glm’ has not been declared
+  void setUniform(glm::vec2 value){
+                  ^~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:56:28: error: expected ‘,’ or ‘...’ before ‘value’
+  void setUniform(glm::vec2 value){
+                            ^~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:56:7: error: ‘void gloc::Uniform::setUniform(int)’ cannot be overloaded
+  void setUniform(glm::vec2 value){
+       ^~~~~~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:46:7: error: with ‘void gloc::Uniform::setUniform(int)’
+  void setUniform(int value){
+       ^~~~~~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:61:18: error: ‘glm’ has not been declared
+  void setUniform(glm::vec3 value){
+                  ^~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:61:28: error: expected ‘,’ or ‘...’ before ‘value’
+  void setUniform(glm::vec3 value){
+                            ^~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:61:7: error: ‘void gloc::Uniform::setUniform(int)’ cannot be overloaded
+  void setUniform(glm::vec3 value){
+       ^~~~~~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:46:7: error: with ‘void gloc::Uniform::setUniform(int)’
+  void setUniform(int value){
+       ^~~~~~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:66:18: error: ‘glm’ has not been declared
+  void setUniform(glm::vec4 value){
+                  ^~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:66:28: error: expected ‘,’ or ‘...’ before ‘value’
+  void setUniform(glm::vec4 value){
+                            ^~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:66:7: error: ‘void gloc::Uniform::setUniform(int)’ cannot be overloaded
+  void setUniform(glm::vec4 value){
+       ^~~~~~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:46:7: error: with ‘void gloc::Uniform::setUniform(int)’
+  void setUniform(int value){
+       ^~~~~~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:76:25: error: ‘glm’ was not declared in this scope
+  void setUniform(vector<glm::vec2> values){
+                         ^~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:76:34: error: template argument 1 is invalid
+  void setUniform(vector<glm::vec2> values){
+                                  ^
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:76:34: error: template argument 2 is invalid
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:76:25: error: ‘glm’ was not declared in this scope
+  void setUniform(vector<glm::vec2> values){
+                         ^~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:76:34: error: template argument 1 is invalid
+  void setUniform(vector<glm::vec2> values){
+                                  ^
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:76:34: error: template argument 2 is invalid
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:76:25: error: ‘glm’ was not declared in this scope
+  void setUniform(vector<glm::vec2> values){
+                         ^~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:76:34: error: template argument 1 is invalid
+  void setUniform(vector<glm::vec2> values){
+                                  ^
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:76:34: error: template argument 2 is invalid
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:76:18: error: ‘vector’ is not a type
+  void setUniform(vector<glm::vec2> values){
+                  ^~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:76:24: error: expected ‘,’ or ‘...’ before ‘<’ token
+  void setUniform(vector<glm::vec2> values){
+                        ^
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:76:7: error: ‘void gloc::Uniform::setUniform(int)’ cannot be overloaded
+  void setUniform(vector<glm::vec2> values){
+       ^~~~~~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:46:7: error: with ‘void gloc::Uniform::setUniform(int)’
+  void setUniform(int value){
+       ^~~~~~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:81:25: error: ‘glm’ was not declared in this scope
+  void setUniform(vector<glm::vec3> values){
+                         ^~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:81:34: error: template argument 1 is invalid
+  void setUniform(vector<glm::vec3> values){
+                                  ^
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:81:34: error: template argument 2 is invalid
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:81:25: error: ‘glm’ was not declared in this scope
+  void setUniform(vector<glm::vec3> values){
+                         ^~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:81:34: error: template argument 1 is invalid
+  void setUniform(vector<glm::vec3> values){
+                                  ^
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:81:34: error: template argument 2 is invalid
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:81:25: error: ‘glm’ was not declared in this scope
+  void setUniform(vector<glm::vec3> values){
+                         ^~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:81:34: error: template argument 1 is invalid
+  void setUniform(vector<glm::vec3> values){
+                                  ^
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:81:34: error: template argument 2 is invalid
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:81:18: error: ‘vector’ is not a type
+  void setUniform(vector<glm::vec3> values){
+                  ^~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:81:24: error: expected ‘,’ or ‘...’ before ‘<’ token
+  void setUniform(vector<glm::vec3> values){
+                        ^
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:81:7: error: ‘void gloc::Uniform::setUniform(int)’ cannot be overloaded
+  void setUniform(vector<glm::vec3> values){
+       ^~~~~~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:46:7: error: with ‘void gloc::Uniform::setUniform(int)’
+  void setUniform(int value){
+       ^~~~~~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:86:25: error: ‘glm’ was not declared in this scope
+  void setUniform(vector<glm::vec4> values){
+                         ^~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:86:34: error: template argument 1 is invalid
+  void setUniform(vector<glm::vec4> values){
+                                  ^
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:86:34: error: template argument 2 is invalid
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:86:25: error: ‘glm’ was not declared in this scope
+  void setUniform(vector<glm::vec4> values){
+                         ^~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:86:34: error: template argument 1 is invalid
+  void setUniform(vector<glm::vec4> values){
+                                  ^
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:86:34: error: template argument 2 is invalid
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:86:25: error: ‘glm’ was not declared in this scope
+  void setUniform(vector<glm::vec4> values){
+                         ^~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:86:34: error: template argument 1 is invalid
+  void setUniform(vector<glm::vec4> values){
+                                  ^
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:86:34: error: template argument 2 is invalid
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:86:18: error: ‘vector’ is not a type
+  void setUniform(vector<glm::vec4> values){
+                  ^~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:86:24: error: expected ‘,’ or ‘...’ before ‘<’ token
+  void setUniform(vector<glm::vec4> values){
+                        ^
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:86:7: error: ‘void gloc::Uniform::setUniform(int)’ cannot be overloaded
+  void setUniform(vector<glm::vec4> values){
+       ^~~~~~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:46:7: error: with ‘void gloc::Uniform::setUniform(int)’
+  void setUniform(int value){
+       ^~~~~~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:91:18: error: ‘glm’ has not been declared
+  void setUniform(glm::mat2 value){
+                  ^~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:91:28: error: expected ‘,’ or ‘...’ before ‘value’
+  void setUniform(glm::mat2 value){
+                            ^~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:91:7: error: ‘void gloc::Uniform::setUniform(int)’ cannot be overloaded
+  void setUniform(glm::mat2 value){
+       ^~~~~~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:46:7: error: with ‘void gloc::Uniform::setUniform(int)’
+  void setUniform(int value){
+       ^~~~~~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:96:18: error: ‘glm’ has not been declared
+  void setUniform(glm::mat3 value){
+                  ^~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:96:28: error: expected ‘,’ or ‘...’ before ‘value’
+  void setUniform(glm::mat3 value){
+                            ^~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:96:7: error: ‘void gloc::Uniform::setUniform(int)’ cannot be overloaded
+  void setUniform(glm::mat3 value){
+       ^~~~~~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:46:7: error: with ‘void gloc::Uniform::setUniform(int)’
+  void setUniform(int value){
+       ^~~~~~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:101:18: error: ‘glm’ has not been declared
+  void setUniform(glm::mat4 value){
+                  ^~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:101:28: error: expected ‘,’ or ‘...’ before ‘value’
+  void setUniform(glm::mat4 value){
+                            ^~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:101:7: error: ‘void gloc::Uniform::setUniform(int)’ cannot be overloaded
+  void setUniform(glm::mat4 value){
+       ^~~~~~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:46:7: error: with ‘void gloc::Uniform::setUniform(int)’
+  void setUniform(int value){
+       ^~~~~~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp: In member function ‘void gloc::Uniform::setUniform(int)’:
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:58:21: error: ‘value’ was not declared in this scope
+    glUniform2f(loc, value.x, value.y);
+                     ^~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp: In member function ‘void gloc::Uniform::setUniform(int)’:
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:63:21: error: ‘value’ was not declared in this scope
+    glUniform3f(loc, value.x, value.y, value.z);
+                     ^~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp: In member function ‘void gloc::Uniform::setUniform(int)’:
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:68:21: error: ‘value’ was not declared in this scope
+    glUniform4f(loc, value.x, value.y, value.z, value.w);
+                     ^~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp: In member function ‘void gloc::Uniform::setUniform(int)’:
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:78:22: error: ‘values’ was not declared in this scope
+    glUniform2fv(loc, values.size(), (GLfloat*) values.data());
+                      ^~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp: In member function ‘void gloc::Uniform::setUniform(int)’:
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:83:22: error: ‘values’ was not declared in this scope
+    glUniform3fv(loc, values.size(), (GLfloat*) values.data());
+                      ^~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp: In member function ‘void gloc::Uniform::setUniform(int)’:
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:88:22: error: ‘values’ was not declared in this scope
+    glUniform4fv(loc, values.size(), (GLfloat*) values.data());
+                      ^~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp: In member function ‘void gloc::Uniform::setUniform(int)’:
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:93:42: error: ‘value’ was not declared in this scope
+    glUniformMatrix3fv(loc, 1, GL_FALSE, &value[0][0]);
+                                          ^~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp: In member function ‘void gloc::Uniform::setUniform(int)’:
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:98:42: error: ‘value’ was not declared in this scope
+    glUniformMatrix3fv(loc, 1, GL_FALSE, &value[0][0]);
+                                          ^~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp: In member function ‘void gloc::Uniform::setUniform(int)’:
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:103:42: error: ‘value’ was not declared in this scope
+    glUniformMatrix4fv(loc, 1, GL_FALSE, &value[0][0]);
+                                          ^~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp: At global scope:
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:180:32: error: ‘glm’ has not been declared
+  void setUniform(size_t index, glm::vec2 value){ setUniform<glm::vec2>(index, value); }
+                                ^~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:180:42: error: expected ‘,’ or ‘...’ before ‘value’
+  void setUniform(size_t index, glm::vec2 value){ setUniform<glm::vec2>(index, value); }
+                                          ^~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:180:7: error: ‘void gloc::Program::setUniform(size_t, int)’ cannot be overloaded
+  void setUniform(size_t index, glm::vec2 value){ setUniform<glm::vec2>(index, value); }
+       ^~~~~~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:178:7: error: with ‘void gloc::Program::setUniform(size_t, int)’
+  void setUniform(size_t index, int value){ setUniform<int>(index, value); }
+       ^~~~~~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:181:32: error: ‘glm’ has not been declared
+  void setUniform(size_t index, glm::vec3 value){ setUniform<glm::vec3>(index, value); }
+                                ^~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:181:42: error: expected ‘,’ or ‘...’ before ‘value’
+  void setUniform(size_t index, glm::vec3 value){ setUniform<glm::vec3>(index, value); }
+                                          ^~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:181:7: error: ‘void gloc::Program::setUniform(size_t, int)’ cannot be overloaded
+  void setUniform(size_t index, glm::vec3 value){ setUniform<glm::vec3>(index, value); }
+       ^~~~~~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:178:7: error: with ‘void gloc::Program::setUniform(size_t, int)’
+  void setUniform(size_t index, int value){ setUniform<int>(index, value); }
+       ^~~~~~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:182:32: error: ‘glm’ has not been declared
+  void setUniform(size_t index, glm::vec4 value){ setUniform<glm::vec4>(index, value); }
+                                ^~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:182:42: error: expected ‘,’ or ‘...’ before ‘value’
+  void setUniform(size_t index, glm::vec4 value){ setUniform<glm::vec4>(index, value); }
+                                          ^~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:182:7: error: ‘void gloc::Program::setUniform(size_t, int)’ cannot be overloaded
+  void setUniform(size_t index, glm::vec4 value){ setUniform<glm::vec4>(index, value); }
+       ^~~~~~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:178:7: error: with ‘void gloc::Program::setUniform(size_t, int)’
+  void setUniform(size_t index, int value){ setUniform<int>(index, value); }
+       ^~~~~~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:184:39: error: ‘glm’ was not declared in this scope
+  void setUniform(size_t index, vector<glm::vec2> values){ setUniform<vector<glm::vec2>>(index, values); }
+                                       ^~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:184:48: error: template argument 1 is invalid
+  void setUniform(size_t index, vector<glm::vec2> values){ setUniform<vector<glm::vec2>>(index, values); }
+                                                ^
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:184:48: error: template argument 2 is invalid
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:184:39: error: ‘glm’ was not declared in this scope
+  void setUniform(size_t index, vector<glm::vec2> values){ setUniform<vector<glm::vec2>>(index, values); }
+                                       ^~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:184:48: error: template argument 1 is invalid
+  void setUniform(size_t index, vector<glm::vec2> values){ setUniform<vector<glm::vec2>>(index, values); }
+                                                ^
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:184:48: error: template argument 2 is invalid
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:184:39: error: ‘glm’ was not declared in this scope
+  void setUniform(size_t index, vector<glm::vec2> values){ setUniform<vector<glm::vec2>>(index, values); }
+                                       ^~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:184:48: error: template argument 1 is invalid
+  void setUniform(size_t index, vector<glm::vec2> values){ setUniform<vector<glm::vec2>>(index, values); }
+                                                ^
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:184:48: error: template argument 2 is invalid
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:184:32: error: ‘vector’ is not a type
+  void setUniform(size_t index, vector<glm::vec2> values){ setUniform<vector<glm::vec2>>(index, values); }
+                                ^~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:184:38: error: expected ‘,’ or ‘...’ before ‘<’ token
+  void setUniform(size_t index, vector<glm::vec2> values){ setUniform<vector<glm::vec2>>(index, values); }
+                                      ^
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:184:7: error: ‘void gloc::Program::setUniform(size_t, int)’ cannot be overloaded
+  void setUniform(size_t index, vector<glm::vec2> values){ setUniform<vector<glm::vec2>>(index, values); }
+       ^~~~~~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:178:7: error: with ‘void gloc::Program::setUniform(size_t, int)’
+  void setUniform(size_t index, int value){ setUniform<int>(index, value); }
+       ^~~~~~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:185:39: error: ‘glm’ was not declared in this scope
+  void setUniform(size_t index, vector<glm::vec3> values){ setUniform<vector<glm::vec3>>(index, values); }
+                                       ^~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:185:48: error: template argument 1 is invalid
+  void setUniform(size_t index, vector<glm::vec3> values){ setUniform<vector<glm::vec3>>(index, values); }
+                                                ^
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:185:48: error: template argument 2 is invalid
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:185:39: error: ‘glm’ was not declared in this scope
+  void setUniform(size_t index, vector<glm::vec3> values){ setUniform<vector<glm::vec3>>(index, values); }
+                                       ^~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:185:48: error: template argument 1 is invalid
+  void setUniform(size_t index, vector<glm::vec3> values){ setUniform<vector<glm::vec3>>(index, values); }
+                                                ^
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:185:48: error: template argument 2 is invalid
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:185:39: error: ‘glm’ was not declared in this scope
+  void setUniform(size_t index, vector<glm::vec3> values){ setUniform<vector<glm::vec3>>(index, values); }
+                                       ^~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:185:48: error: template argument 1 is invalid
+  void setUniform(size_t index, vector<glm::vec3> values){ setUniform<vector<glm::vec3>>(index, values); }
+                                                ^
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:185:48: error: template argument 2 is invalid
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:185:32: error: ‘vector’ is not a type
+  void setUniform(size_t index, vector<glm::vec3> values){ setUniform<vector<glm::vec3>>(index, values); }
+                                ^~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:185:38: error: expected ‘,’ or ‘...’ before ‘<’ token
+  void setUniform(size_t index, vector<glm::vec3> values){ setUniform<vector<glm::vec3>>(index, values); }
+                                      ^
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:185:7: error: ‘void gloc::Program::setUniform(size_t, int)’ cannot be overloaded
+  void setUniform(size_t index, vector<glm::vec3> values){ setUniform<vector<glm::vec3>>(index, values); }
+       ^~~~~~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:178:7: error: with ‘void gloc::Program::setUniform(size_t, int)’
+  void setUniform(size_t index, int value){ setUniform<int>(index, value); }
+       ^~~~~~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:186:39: error: ‘glm’ was not declared in this scope
+  void setUniform(size_t index, vector<glm::vec4> values){ setUniform<vector<glm::vec4>>(index, values); }
+                                       ^~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:186:48: error: template argument 1 is invalid
+  void setUniform(size_t index, vector<glm::vec4> values){ setUniform<vector<glm::vec4>>(index, values); }
+                                                ^
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:186:48: error: template argument 2 is invalid
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:186:39: error: ‘glm’ was not declared in this scope
+  void setUniform(size_t index, vector<glm::vec4> values){ setUniform<vector<glm::vec4>>(index, values); }
+                                       ^~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:186:48: error: template argument 1 is invalid
+  void setUniform(size_t index, vector<glm::vec4> values){ setUniform<vector<glm::vec4>>(index, values); }
+                                                ^
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:186:48: error: template argument 2 is invalid
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:186:39: error: ‘glm’ was not declared in this scope
+  void setUniform(size_t index, vector<glm::vec4> values){ setUniform<vector<glm::vec4>>(index, values); }
+                                       ^~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:186:48: error: template argument 1 is invalid
+  void setUniform(size_t index, vector<glm::vec4> values){ setUniform<vector<glm::vec4>>(index, values); }
+                                                ^
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:186:48: error: template argument 2 is invalid
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:186:32: error: ‘vector’ is not a type
+  void setUniform(size_t index, vector<glm::vec4> values){ setUniform<vector<glm::vec4>>(index, values); }
+                                ^~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:186:38: error: expected ‘,’ or ‘...’ before ‘<’ token
+  void setUniform(size_t index, vector<glm::vec4> values){ setUniform<vector<glm::vec4>>(index, values); }
+                                      ^
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:186:7: error: ‘void gloc::Program::setUniform(size_t, int)’ cannot be overloaded
+  void setUniform(size_t index, vector<glm::vec4> values){ setUniform<vector<glm::vec4>>(index, values); }
+       ^~~~~~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:178:7: error: with ‘void gloc::Program::setUniform(size_t, int)’
+  void setUniform(size_t index, int value){ setUniform<int>(index, value); }
+       ^~~~~~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:187:32: error: ‘glm’ has not been declared
+  void setUniform(size_t index, glm::mat2 value){ setUniform<glm::mat2>(index, value); }
+                                ^~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:187:42: error: expected ‘,’ or ‘...’ before ‘value’
+  void setUniform(size_t index, glm::mat2 value){ setUniform<glm::mat2>(index, value); }
+                                          ^~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:187:7: error: ‘void gloc::Program::setUniform(size_t, int)’ cannot be overloaded
+  void setUniform(size_t index, glm::mat2 value){ setUniform<glm::mat2>(index, value); }
+       ^~~~~~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:178:7: error: with ‘void gloc::Program::setUniform(size_t, int)’
+  void setUniform(size_t index, int value){ setUniform<int>(index, value); }
+       ^~~~~~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:188:32: error: ‘glm’ has not been declared
+  void setUniform(size_t index, glm::mat3 value){ setUniform<glm::mat3>(index, value); }
+                                ^~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:188:42: error: expected ‘,’ or ‘...’ before ‘value’
+  void setUniform(size_t index, glm::mat3 value){ setUniform<glm::mat3>(index, value); }
+                                          ^~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:188:7: error: ‘void gloc::Program::setUniform(size_t, int)’ cannot be overloaded
+  void setUniform(size_t index, glm::mat3 value){ setUniform<glm::mat3>(index, value); }
+       ^~~~~~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:178:7: error: with ‘void gloc::Program::setUniform(size_t, int)’
+  void setUniform(size_t index, int value){ setUniform<int>(index, value); }
+       ^~~~~~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:189:32: error: ‘glm’ has not been declared
+  void setUniform(size_t index, glm::mat4 value){ setUniform<glm::mat4>(index, value); }
+                                ^~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:189:42: error: expected ‘,’ or ‘...’ before ‘value’
+  void setUniform(size_t index, glm::mat4 value){ setUniform<glm::mat4>(index, value); }
+                                          ^~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:189:7: error: ‘void gloc::Program::setUniform(size_t, int)’ cannot be overloaded
+  void setUniform(size_t index, glm::mat4 value){ setUniform<glm::mat4>(index, value); }
+       ^~~~~~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:178:7: error: with ‘void gloc::Program::setUniform(size_t, int)’
+  void setUniform(size_t index, int value){ setUniform<int>(index, value); }
+       ^~~~~~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp: In member function ‘void gloc::Program::setUniform(size_t, int)’:
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:180:61: error: ‘glm’ was not declared in this scope
+  void setUniform(size_t index, glm::vec2 value){ setUniform<glm::vec2>(index, value); }
+                                                             ^~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:180:50: error: parse error in template argument list
+  void setUniform(size_t index, glm::vec2 value){ setUniform<glm::vec2>(index, value); }
+                                                  ^~~~~~~~~~~~~~~~~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:180:79: error: ‘value’ was not declared in this scope
+  void setUniform(size_t index, glm::vec2 value){ setUniform<glm::vec2>(index, value); }
+                                                                               ^~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp: In member function ‘void gloc::Program::setUniform(size_t, int)’:
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:181:61: error: ‘glm’ was not declared in this scope
+  void setUniform(size_t index, glm::vec3 value){ setUniform<glm::vec3>(index, value); }
+                                                             ^~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:181:50: error: parse error in template argument list
+  void setUniform(size_t index, glm::vec3 value){ setUniform<glm::vec3>(index, value); }
+                                                  ^~~~~~~~~~~~~~~~~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:181:79: error: ‘value’ was not declared in this scope
+  void setUniform(size_t index, glm::vec3 value){ setUniform<glm::vec3>(index, value); }
+                                                                               ^~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp: In member function ‘void gloc::Program::setUniform(size_t, int)’:
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:182:61: error: ‘glm’ was not declared in this scope
+  void setUniform(size_t index, glm::vec4 value){ setUniform<glm::vec4>(index, value); }
+                                                             ^~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:182:50: error: parse error in template argument list
+  void setUniform(size_t index, glm::vec4 value){ setUniform<glm::vec4>(index, value); }
+                                                  ^~~~~~~~~~~~~~~~~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:182:79: error: ‘value’ was not declared in this scope
+  void setUniform(size_t index, glm::vec4 value){ setUniform<glm::vec4>(index, value); }
+                                                                               ^~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp: In member function ‘void gloc::Program::setUniform(size_t, int)’:
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:184:77: error: ‘glm’ was not declared in this scope
+  void setUniform(size_t index, vector<glm::vec2> values){ setUniform<vector<glm::vec2>>(index, values); }
+                                                                             ^~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:184:86: error: template argument 1 is invalid
+  void setUniform(size_t index, vector<glm::vec2> values){ setUniform<vector<glm::vec2>>(index, values); }
+                                                                                      ^~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:184:86: error: template argument 2 is invalid
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:184:96: error: ‘values’ was not declared in this scope
+  void setUniform(size_t index, vector<glm::vec2> values){ setUniform<vector<glm::vec2>>(index, values); }
+                                                                                                ^~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:184:59: error: parse error in template argument list
+  void setUniform(size_t index, vector<glm::vec2> values){ setUniform<vector<glm::vec2>>(index, values); }
+                                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:184:59: error: statement cannot resolve address of overloaded function
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp: In member function ‘void gloc::Program::setUniform(size_t, int)’:
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:185:77: error: ‘glm’ was not declared in this scope
+  void setUniform(size_t index, vector<glm::vec3> values){ setUniform<vector<glm::vec3>>(index, values); }
+                                                                             ^~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:185:86: error: template argument 1 is invalid
+  void setUniform(size_t index, vector<glm::vec3> values){ setUniform<vector<glm::vec3>>(index, values); }
+                                                                                      ^~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:185:86: error: template argument 2 is invalid
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:185:96: error: ‘values’ was not declared in this scope
+  void setUniform(size_t index, vector<glm::vec3> values){ setUniform<vector<glm::vec3>>(index, values); }
+                                                                                                ^~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:185:59: error: parse error in template argument list
+  void setUniform(size_t index, vector<glm::vec3> values){ setUniform<vector<glm::vec3>>(index, values); }
+                                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:185:59: error: statement cannot resolve address of overloaded function
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp: In member function ‘void gloc::Program::setUniform(size_t, int)’:
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:186:77: error: ‘glm’ was not declared in this scope
+  void setUniform(size_t index, vector<glm::vec4> values){ setUniform<vector<glm::vec4>>(index, values); }
+                                                                             ^~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:186:86: error: template argument 1 is invalid
+  void setUniform(size_t index, vector<glm::vec4> values){ setUniform<vector<glm::vec4>>(index, values); }
+                                                                                      ^~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:186:86: error: template argument 2 is invalid
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:186:96: error: ‘values’ was not declared in this scope
+  void setUniform(size_t index, vector<glm::vec4> values){ setUniform<vector<glm::vec4>>(index, values); }
+                                                                                                ^~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:186:59: error: parse error in template argument list
+  void setUniform(size_t index, vector<glm::vec4> values){ setUniform<vector<glm::vec4>>(index, values); }
+                                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:186:59: error: statement cannot resolve address of overloaded function
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp: In member function ‘void gloc::Program::setUniform(size_t, int)’:
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:187:61: error: ‘glm’ was not declared in this scope
+  void setUniform(size_t index, glm::mat2 value){ setUniform<glm::mat2>(index, value); }
+                                                             ^~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:187:50: error: parse error in template argument list
+  void setUniform(size_t index, glm::mat2 value){ setUniform<glm::mat2>(index, value); }
+                                                  ^~~~~~~~~~~~~~~~~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:187:79: error: ‘value’ was not declared in this scope
+  void setUniform(size_t index, glm::mat2 value){ setUniform<glm::mat2>(index, value); }
+                                                                               ^~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp: In member function ‘void gloc::Program::setUniform(size_t, int)’:
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:188:61: error: ‘glm’ was not declared in this scope
+  void setUniform(size_t index, glm::mat3 value){ setUniform<glm::mat3>(index, value); }
+                                                             ^~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:188:50: error: parse error in template argument list
+  void setUniform(size_t index, glm::mat3 value){ setUniform<glm::mat3>(index, value); }
+                                                  ^~~~~~~~~~~~~~~~~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:188:79: error: ‘value’ was not declared in this scope
+  void setUniform(size_t index, glm::mat3 value){ setUniform<glm::mat3>(index, value); }
+                                                                               ^~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp: In member function ‘void gloc::Program::setUniform(size_t, int)’:
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:189:61: error: ‘glm’ was not declared in this scope
+  void setUniform(size_t index, glm::mat4 value){ setUniform<glm::mat4>(index, value); }
+                                                             ^~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:189:50: error: parse error in template argument list
+  void setUniform(size_t index, glm::mat4 value){ setUniform<glm::mat4>(index, value); }
+                                                  ^~~~~~~~~~~~~~~~~~~~~
+/home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/objects/Program.hpp:189:79: error: ‘value’ was not declared in this scope
+  void setUniform(size_t index, glm::mat4 value){ setUniform<glm::mat4>(index, value); }
+                                                                               ^~~~~
+In file included from src/main.cpp:11:0:
+./include/Glfw.hpp: At global scope:
+./include/Glfw.hpp:11:2: error: ‘vector’ does not name a type
+  vector<GLFWmonitor*> monitors;
+  ^~~~~~
+./include/Glfw.hpp:36:8: error: ‘vector’ does not name a type
+  const vector<GLFWmonitor*>& getMonitors(){ return(monitors); }
+        ^~~~~~
+./include/Glfw.hpp: In lambda function:
+./include/Glfw.hpp:19:5: error: ‘cout’ was not declared in this scope
+     cout
+     ^~~~
+./include/Glfw.hpp:19:5: note: suggested alternatives:
+In file included from /home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/util/dcg/stl/common.hpp:8:0,
+                 from /home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/util/dcg/dcg.hpp:6,
+                 from /home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/util/util.hpp:8,
+                 from /home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/core.hpp:4,
+                 from /home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/gloc.hpp:4,
+                 from src/main.cpp:6:
+/usr/include/c++/6/iostream:61:18: note:   ‘std::cout’
+   extern ostream cout;  /// Linked to standard output
+                  ^~~~
+/usr/include/c++/6/iostream:61:18: note:   ‘std::cout’
+/usr/include/c++/6/iostream:61:18: note:   ‘std::cout’
+In file included from src/main.cpp:11:0:
+./include/Glfw.hpp:21:26: error: ‘endl’ was not declared in this scope
+      << "code: " << i << endl
+                          ^~~~
+./include/Glfw.hpp:21:26: note: suggested alternatives:
+In file included from /usr/include/c++/6/iterator:64:0,
+                 from /home/dylan/makefileProjects/MY_LIBRARIES/dcg/include/dcg/stl/range_t.hpp:4,
+                 from /home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/util/dcg/stl/smartPtrs.hpp:4,
+                 from /home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/util/dcg/dcg.hpp:4,
+                 from /home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/util/util.hpp:8,
+                 from /home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/core/core.hpp:4,
+                 from /home/dylan/makefileProjects/MY_LIBRARIES/gloc/include/gloc/gloc.hpp:4,
+                 from src/main.cpp:6:
+/usr/include/c++/6/ostream:590:5: note:   ‘std::endl’
+     endl(basic_ostream<_CharT, _Traits>& __os)
+     ^~~~
+/usr/include/c++/6/ostream:590:5: note:   ‘std::endl’
+/usr/include/c++/6/ostream:590:5: note:   ‘std::endl’
+In file included from src/main.cpp:11:0:
+./include/Glfw.hpp: In member function ‘void glob::Glfw::init()’:
+./include/Glfw.hpp:32:4: error: ‘monitors’ was not declared in this scope
+    monitors.push_back(ms[i]);
+    ^~~~~~~~
+make: *** [build/obj/main.o] Error 1

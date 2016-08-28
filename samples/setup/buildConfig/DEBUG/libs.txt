@@ -1,0 +1,4 @@
+-lGL
+-lGLU
+-lglfw3 -ldl -lXinerama -lX11 -lXxf86vm -lXrandr -lpthread -lXi -lXcursor
+-lGLEW

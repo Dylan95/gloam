@@ -1,0 +1,4 @@
+-L"/usr/lib/nvidia-304"
+-L"/usr/local/lib"
+-L"/usr/lib"
+-L"/usr/lib/x86_64-linux-gnu"
