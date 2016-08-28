@@ -1,0 +1,29 @@
+TABLE OF CONTENTS:
+	1.  Introduction
+	2.  Legal
+	3.  Installation
+	4.  Dependancies
+	5.  Sample program
+
+
+1.  Introduction:
+
+Hello there.  My name is Dylan Gundlach.  This is the "gloam" library.  It is an OpenGL object oriented wrapper library.  It's a header only library, so installation is simple.  It is currently in alpha, and needs a lot of testing.  I cannot guarentee the backwards compatability of future versions.  I tried to make it as complete as I could.  It has 2 dependencies: "glew" and "glm".
+
+
+2.  Legal:
+	Please read the file named "LICENCE".  It has the standard MIT licence, which essentially says that you can use it in any kind of software, but you must include the licence with it.
+
+
+3.  Installation:
+	Copy the folder "include/gloam/" into some central location that the compiler will look for.  On linux a good place is "usr/include".
+
+
+4.  Dependancies:
+	1.  "glew": used to load extentions to access the opengl API.
+	2.  "glm: a math library.  Used in "gloam/core/objects/Program.hpp" to set uniforms.
+
+
+5.  Sample program:
+	"samples/setup" contains a simple program that creates a window and intialized glew with it.  Then creates a gloam::Context object.  It depends on "glfw" as well as "gloam".  It uses GNU-make and .sh scripts to build.  So if you want to build the sample program on Windows, you should be able to do it through "Cygwin" or a similar program.
+
