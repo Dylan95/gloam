@@ -20,8 +20,9 @@ Hello there.  My name is Dylan Gundlach.  This is the "gloam" library.  It is an
 
 
 4.  Dependancies:
-	1.  "glew": used to load extentions to access the opengl API.
-	2.  "glm: a math library.  Used in "gloam/core/objects/Program.hpp" to set uniforms.
+	1.  "OpenGL": version 4.2 or later
+	2.  "glew": used to load extentions to access the opengl API.
+	3.  "glm": a math library.  Used in "gloam/core/objects/Program.hpp" to set uniforms.
 
 
 5.  Sample program:
