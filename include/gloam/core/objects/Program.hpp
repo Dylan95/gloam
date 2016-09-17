@@ -18,10 +18,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 #include <vector>
 
-#include "Glew.hpp"
 #include "gloam/core/objects/GLObject.hpp"
 
-#include "Shader.hpp"
+#include "gloam/core/objects/Shader.hpp"
 
 #include "gloam/core/context/Context.hpp"
 #include "gloam/core/Binding.hpp"
@@ -242,3 +241,5 @@ private:
 }
 
 #endif
+
+
