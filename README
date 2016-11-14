@@ -16,15 +16,15 @@ Hello there.  My name is Dylan Gundlach.  This is the "gloam" library.  It is an
 
 
 3.  Installation:
-	Copy the folder "include/gloam/" into some central location that the compiler will look for.  On linux a good place is "usr/include".
+	Copy the folder "src/include/gloam/" into some central location that the compiler will look for.  On linux a good place is "usr/include".
 
 
 4.  Dependancies:
-	1.  "OpenGL": version 4.2 or later
+	1.  "OpenGL": version 3.2 or later
 	2.  "glew": used to load extentions to access the opengl API.
 	3.  "glm": a math library.  Used in "gloam/core/objects/Program.hpp" to set uniforms.
 
 
 5.  Sample program:
-	"samples/setup" contains a simple program that creates a window and intialized glew with it.  Then creates a gloam::Context object.  It depends on "glfw" as well as "gloam".  It uses GNU-make and .sh scripts to build.  So if you want to build the sample program on Windows, you should be able to do it through "Cygwin" or a similar program.
+	"samples/setup" contains a simple program that creates a window and intialized glew with it.  Then creates a gloam::Context object.  It depends on "glfw" as well as "gloam".  It uses python version 3 scripts to build.
 

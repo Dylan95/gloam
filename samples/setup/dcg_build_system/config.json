@@ -1,0 +1,65 @@
+{
+	"configurations": {
+		"DEBUG": {
+			"toolset": "GCC",
+			"bin": {
+				"bin_name": "program.exc",
+				"cc": "g++-6",
+				"lflags": [
+				],
+				"lib_directories": [
+					"/usr/lib/nvidia-304",
+					"/usr/local/lib",
+					"/usr/lib",
+					"/usr/lib/x86_64-linux-gnu"
+				],
+				"libs": [
+					"GL",
+					"GLU",
+					"glfw3", 
+					"dl", "Xinerama", "X11", "Xxf86vm", "Xrandr", "pthread", "Xi", "Xcursor",
+					"GLEW"
+				]
+			},
+			"modules": {
+				"MAIN": {
+					"cc": "g++-6",
+					"cflags": [
+						"std=c++14",
+						"ftrapv",
+						"ggdb3"
+					],
+					"pch": [
+					],
+					"include_directories": {
+						"include_directories": [
+							"include",
+							"/usr/include",
+							"/home/dylan/header_only_libs",
+							"/home/dylan/makefileProjects/MY_LIBRARIES/dcg/include",
+							"/home/dylan/makefileProjects/MY_LIBRARIES/gloam/include"
+						],
+						"include_directories_recursive": [
+						]
+					},
+					"src": {
+						"src": [
+						],
+						"search": {
+							"directories": [
+								"src"
+							],
+							"directories_recursive": [
+							],
+							"filetypes": [
+								"c",
+								"cpp",
+								"cxx"
+							]
+						}
+					}
+				}
+			}
+		}
+	}
+}
